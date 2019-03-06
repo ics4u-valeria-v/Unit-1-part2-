@@ -1,5 +1,41 @@
+/*
+ * Multidimensional Arrays
+ * Created by: Valeria V
+ * Created on: March-6-2019
+ */
+import java.lang.reflect.Array;
+import java.util.Arrays;
 
 public class MultidimArray {
+	
+	public static String calcAverage(int[][]marks)
+	{
+		//declare local variables
+		String averDisplay = "";
+		int totSum = 0;
+
+		
+		for (int student = 0; student < marks.length; student++)
+		{
+			//second row
+			for (int assignment = 0; assignment < marks[1].length; assignment++ )
+			{
+				//get the mark from the array
+				int mark = marks[student][assignment];
+				//calculate the sum of the marks
+				totSum = totSum + mark;
+				
+			}
+		}
+		
+		//calculate the average
+		int average = totSum / 24;
+		averDisplay = "The average of the class is " + average;
+		
+		return averDisplay;
+	}
+	
+	
 	
 	public static void main(String[]args)
 	{
@@ -20,40 +56,19 @@ public class MultidimArray {
 			{
 				//generate a random mark
 				int mark = (int)(Math.random()*((max-min)+1))+min;
-				//display the mark to the console
-				System.out.println(mark);	
+				//add the mark to the array
+				studMarks[student][assignment] = mark;
+				System.out.println(mark);
 			}
 			System.out.println("\n");
 			
 		}
 		
-		String average = calcAverage(studMarks);
-		System.out.println(average);
-
-	}
-	
-	public static String calcAverage(int[][]marks)
-	{
-		//declare local variables
-		String averDisplay = "";
-		int sumAv = 0;
-		//loop through the array and find the average of each row 
-		for (int student = 0; student < marks.length; student++)
-		{
-			for (int assign = 0; assign < marks[1]. length; assign++)
-			{
-				//get the mark from the array
-				int mark = marks[student][assign];
-				System.out.println(mark);
-				//add it to the sum
-				sumAv = sumAv + mark;
-			}
-		}
-	
+		//call the calculate average function
+		String dispString = calcAverage(studMarks);
+		//display the average to the console
+		System.out.println(dispString);
 		
-		averDisplay = "The average of the class is " ;
-		return averDisplay;
 	}
 	
-
 }
