@@ -21,6 +21,8 @@ public class MaxMinVV {
 	//declare global variables
 	int min_Num = 99;
 	int max_Num = 1;
+	int []randomNumbers = new int[10];
+	
 	JTextPane txtRandoms;
 	/**
 	 * Launch the application.
@@ -44,7 +46,54 @@ public class MaxMinVV {
 	public MaxMinVV() {
 		initialize();
 	}
+	
+	//Function: FindMax
+	//Input: randomNumbers[]
+	//Output: maxNum 
+	// This function loops through the array with random numbers and gets the max number
+	public int FindMax(int[]randomNum)
+	{
+		int maxNum = 0;
+		//generate random numbers by using the for loop
+		for (int counter = 0; counter < 10; counter++)
+		{
+			int rndNum = randomNum[counter];
 
+			//check if the number if greater than the maxNum
+		    if (rndNum > maxNum)
+			{
+				//then set the maximum number to be equal to the random number
+				maxNum = rndNum;
+			}
+			
+		}
+		
+		return maxNum;
+	}
+	
+	//Function: FindMin
+	//Input: randomNumbers[]
+	//Output: maxNum 
+	// This function loops through the array with random numbers and gets the max number
+	public int FindMin(int[]randomNum)
+	{
+		int minNum = 99;
+		//generate random numbers by using the for loop
+		for (int counter = 0; counter < 10; counter++)
+		{
+			int rndNum = randomNum[counter];
+
+			//check if the number if less than the minNum
+			if (rndNum < minNum)
+			{
+				//then set the minimum number to be equal to the random number
+				minNum = rndNum;
+			}
+			
+		}
+		
+		return minNum;
+	}
 	/**
 	 * Initialize the contents of the frame.
 	 */
@@ -80,26 +129,19 @@ public class MaxMinVV {
 				{
 					//select a random number between 1 and 99
 					int rnd_num = (int)(Math.random()*((max-min)+1))+min;
+					//add the number to the array
+					randomNumbers[counter] = rnd_num;
+					//convert the integer to a string
 					String numStr = Integer.toString(rnd_num);
 					//add the number to the list box
 					displayStr = displayStr + "\n" +  numStr;
 					
-					//check if the number if less than the minNum
-					if (rnd_num < min_Num)
-					{
-						//then set the minimum number to be equal to the random number
-						min_Num = rnd_num;
-					}
-					//check if the number if less than the maxNum
-					else if (rnd_num > max_Num)
-					{
-						//then set the maximum number to be equal to the random number
-						max_Num = rnd_num;
-					}
-					
 				}
 				//add the display string to the text box
 				txtRandoms.setText(displayStr);
+				//call FindMin and FindMax function
+				min_Num = FindMin(randomNumbers);
+				max_Num = FindMax(randomNumbers);
 				//display the min and max 
 				lblMin.setText("Min: " + min_Num);
 				lblMax.setText("Max: " + max_Num);
