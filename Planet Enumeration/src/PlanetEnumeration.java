@@ -198,16 +198,18 @@ public class PlanetEnumeration {
 		NEPTUNE;	
 	}
 	
-	//create a public class 
+	//create a public class EnumTest
 	public class EnumTest{
+		//create a new object
 		Planets planet;
-		
-		public EnumTest (Planets planet) {
-			this.planet = planet;
+		//get the planets when a new object is created and the name is passed as an argument
+		public EnumTest (Planets passPlanet) {
+			this.planet = passPlanet;
 		}
 		
 		public void displayName()
 		{
+			//check what is planet, then display the name of the planet and its order
 			switch(planet) {
 			
 			case MERCURY:
