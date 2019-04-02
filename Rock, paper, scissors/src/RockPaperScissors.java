@@ -89,7 +89,7 @@ public class RockPaperScissors {
 		JLabel picPaperC = new JLabel("");
 		picPaperC.setBounds(33, 0, 115, 92);
 		panel.add(picPaperC);
-		picPaperC.setIcon(new ImageIcon("N:\\StuShare\\Semester 2 - Winter 2019\\ICS4U Programming\\Veverita, Valeria (s449619)\\Unit 1(part2)\\Rock, paper, scissors\\Images\\paper2.png"));
+		picPaperC.setIcon(new ImageIcon("N:\\a\\Sem2-Winter2019\\ICS4U Programming\\Veverita, Valeria (s449619)\\Unit 1(part2)\\Rock, paper, scissors\\Images\\paper2.png"));
 		
 		JPanel panel_2 = new JPanel();
 		panel_2.setLayout(null);
@@ -104,7 +104,7 @@ public class RockPaperScissors {
 		panel_2.add(radUserRock);
 		
 		JLabel picRock = new JLabel("");
-		picRock.setIcon(new ImageIcon("N:\\StuShare\\Semester 2 - Winter 2019\\ICS4U Programming\\Veverita, Valeria (s449619)\\Unit 1(part2)\\Rock, paper, scissors\\Images\\rock2.png"));
+		picRock.setIcon(new ImageIcon("N:\\a\\Sem2-Winter2019\\ICS4U Programming\\Veverita, Valeria (s449619)\\Unit 1(part2)\\Rock, paper, scissors\\Images\\rock2.png"));
 		picRock.setBounds(36, 0, 115, 92);
 		panel_2.add(picRock);
 		
@@ -121,7 +121,7 @@ public class RockPaperScissors {
 		panel_3.add(radUserScrissors);
 		
 		JLabel picScissors = new JLabel("");
-		picScissors.setIcon(new ImageIcon("N:\\StuShare\\Semester 2 - Winter 2019\\ICS4U Programming\\Veverita, Valeria (s449619)\\Unit 1(part2)\\Rock, paper, scissors\\Images\\scissors2.png"));
+		picScissors.setIcon(new ImageIcon("N:\\a\\Sem2-Winter2019\\ICS4U Programming\\Veverita, Valeria (s449619)\\Unit 1(part2)\\Rock, paper, scissors\\Images\\scissors2.png"));
 		picScissors.setBounds(36, 0, 115, 92);
 		panel_3.add(picScissors);
 		
@@ -153,7 +153,7 @@ public class RockPaperScissors {
 		picPaper.setEnabled(false);
 		picPaper.setBounds(33, 0, 115, 92);
 		panel_5.add(picPaper);
-		picPaper.setIcon(new ImageIcon("N:\\StuShare\\Semester 2 - Winter 2019\\ICS4U Programming\\Veverita, Valeria (s449619)\\Unit 1(part2)\\Rock, paper, scissors\\Images\\paper2.png"));
+		picPaper.setIcon(new ImageIcon("N:\\a\\Sem2-Winter2019\\ICS4U Programming\\Veverita, Valeria (s449619)\\Unit 1(part2)\\Rock, paper, scissors\\Images\\paper2.png"));
 		
 		JPanel panel_6 = new JPanel();
 		panel_6.setLayout(null);
@@ -169,7 +169,7 @@ public class RockPaperScissors {
 		
 		JLabel picRockC = new JLabel("");
 		picRockC.setEnabled(false);
-		picRockC.setIcon(new ImageIcon("N:\\StuShare\\Semester 2 - Winter 2019\\ICS4U Programming\\Veverita, Valeria (s449619)\\Unit 1(part2)\\Rock, paper, scissors\\Images\\rock2.png"));
+		picRockC.setIcon(new ImageIcon("N:\\a\\Sem2-Winter2019\\ICS4U Programming\\Veverita, Valeria (s449619)\\Unit 1(part2)\\Rock, paper, scissors\\Images\\rock2.png"));
 		picRockC.setBounds(36, 0, 115, 92);
 		panel_6.add(picRockC);
 		
@@ -187,7 +187,7 @@ public class RockPaperScissors {
 		
 		JLabel picScissorsC = new JLabel("");
 		picScissorsC.setEnabled(false);
-		picScissorsC.setIcon(new ImageIcon("N:\\StuShare\\Semester 2 - Winter 2019\\ICS4U Programming\\Veverita, Valeria (s449619)\\Unit 1(part2)\\Rock, paper, scissors\\Images\\scissors2.png"));
+		picScissorsC.setIcon(new ImageIcon("N:\\a\\Sem2-Winter2019\\ICS4U Programming\\Veverita, Valeria (s449619)\\Unit 1(part2)\\Rock, paper, scissors\\Images\\scissors2.png"));
 		picScissorsC.setBounds(36, 0, 115, 92);
 		panel_7.add(picScissorsC);
 		grbComp.setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{lblComputersChoice, panel_5, radCompPaper, picPaper, panel_6, radCompRock, picRockC, panel_7, radCompScissors, picScissorsC}));
