@@ -188,14 +188,25 @@ public class PlanetEnumeration {
 	//enumerate the planets
 	public enum Planets
 	{
-		MERCURY,
-		VENUS,
-		EARTH,
-		MARS,
-		JUPITER,
-		SATURN,
-		URANUS,
-		NEPTUNE;	
+		MERCURY(1),
+		VENUS(2),
+		EARTH(3),
+		MARS(4),
+		JUPITER(5),
+		SATURN(6),
+		URANUS(7),
+		NEPTUNE(8);	
+		
+		private final int order; 
+		Planets(int order)
+		{
+			this.order = order;
+		}
+		
+		public int returnValue()
+		{
+			return order;
+		}
 	}
 	
 	//create a public class EnumTest
@@ -213,28 +224,28 @@ public class PlanetEnumeration {
 			switch(planet) {
 			
 			case MERCURY:
-				JOptionPane.showMessageDialog(null, "You would like to go to Mercury, planet " + (planet.ordinal()+ 1));	
+				JOptionPane.showMessageDialog(null, "You would like to go to Mercury, planet #" + planet.returnValue());	
 				break;
 			case VENUS:
-				JOptionPane.showMessageDialog(null, "You would like to go to Venus, planet " + (planet.ordinal()+ 1));	
+				JOptionPane.showMessageDialog(null, "You would like to go to Venus, planet #" + planet.returnValue());	
 				break;
 			case EARTH:
 				JOptionPane.showMessageDialog(null, "You would like to stay on the Earth");	
 				break;
 			case MARS: 
-				JOptionPane.showMessageDialog(null, "You would like to got to Mars, planet " + (planet.ordinal()+ 1));	
+				JOptionPane.showMessageDialog(null, "You would like to got to Mars, planet #" + planet.returnValue());	
 				break;
 			case JUPITER: 
-				JOptionPane.showMessageDialog(null, "You would like to got to Jupiter, planet " + (planet.ordinal()+ 1));	
+				JOptionPane.showMessageDialog(null, "You would like to got to Jupiter, planet #" + planet.returnValue());	
 				break;
 			case SATURN: 
-				JOptionPane.showMessageDialog(null, "You would like to got to Saturn, planet " + (planet.ordinal()+ 1));	
+				JOptionPane.showMessageDialog(null, "You would like to got to Saturn, planet #" + planet.returnValue());	
 				break;
 			case URANUS: 
-				JOptionPane.showMessageDialog(null, "You would like to got to Uranus, planet " + (planet.ordinal()+ 1));	
+				JOptionPane.showMessageDialog(null, "You would like to got to Uranus, planet #" + planet.returnValue());	
 				break;
 			case NEPTUNE: 
-				JOptionPane.showMessageDialog(null, "You would like to got to Neptune, planet " + (planet.ordinal()+ 1));	
+				JOptionPane.showMessageDialog(null, "You would like to got to Neptune, planet #" + planet.returnValue());	
 				break;
 			}
 		}
