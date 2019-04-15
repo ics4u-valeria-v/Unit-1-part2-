@@ -197,7 +197,7 @@ public class PlanetEnumeration {
 		URANUS(7),
 		NEPTUNE(8);	
 		
-		private final int order; 
+		private int order; 
 		Planets(int order)
 		{
 			this.order = order;
